@@ -1,0 +1,20 @@
+# Load AMBER '99 forcefield for protein.
+source oldff/leaprc.ff99SB
+
+
+# Create sequence.
+peptide = sequence { ACE TYR TYR ASP PRO GLU THR GLY THR TRP TYR NME}
+
+# Check peptide.
+check peptide
+
+# Report on net charge.
+charge peptide
+
+
+
+# Write parameters.
+saveAmberParm peptide chignolin.prmtop chignolin.crd
+
+# Exit
+quit

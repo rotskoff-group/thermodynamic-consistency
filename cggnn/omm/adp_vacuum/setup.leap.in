@@ -1,0 +1,17 @@
+# Load AMBER '99 forcefield for protein.
+source oldff/leaprc.ff99SB
+
+# Create sequence.
+peptide = sequence { ACE ALA NME }
+
+# Check peptide.
+check peptide
+
+# Report on net charge.
+charge peptide
+
+# Write parameters.
+saveAmberParm peptide adp_vacuum.prmtop adp_vacuum.crd
+
+# Exit
+quit

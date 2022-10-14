@@ -1,0 +1,21 @@
+# Load AMBER '99 forcefield for protein.
+source oldff/leaprc.ff99SB
+source leaprc.water.tip3p
+
+# Create sequence.
+peptide = sequence { ACE ALA NME }
+
+# Check peptide.
+check peptide
+
+# Report on net charge.
+charge peptide
+
+# Solvate in water box.
+solvateBox peptide TIP3PBOX 9.0 iso
+
+# Write parameters.
+saveAmberParm peptide adp_solvent.prmtop adp_solvent.crd
+
+# Exit
+quit
