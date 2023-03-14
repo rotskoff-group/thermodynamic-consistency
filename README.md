@@ -7,6 +7,7 @@ Official implementation of:
 
 Shriram Chennakesavalu, David J. Toomer and Grant M. Rotskoff
 
+https://arxiv.org/abs/2210.07882
 
 
 **Abstract**: Coarse-grained models are a core computational tool in theoretical chemistry
