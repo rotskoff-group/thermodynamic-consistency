@@ -131,6 +131,11 @@ class CGAPB(nn.Module):
         self.num_beads = num_beads
         self.num_atoms_r = num_atoms_r
         self.min_detach_loss = min_detach_loss
+        self.backbone_r_indices = None
+
+    def set_backbone_r_indices(self, backbone_r_indices):
+        self.backbone_r_indice = backbone_r_indices
+
 
     def forward(self, x_data, batch_size, train_inv_proj_only=False, return_proj=False, fix_inv_proj=False, backbone_r_indices=None):
         """Computes coarse-graining embedding
